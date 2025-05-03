@@ -1,2 +1,2 @@
 # 5-Sprint
-Автотесты для сервиса Stellar Burgers
+## Автотесты для сервиса Stellar Burgers
