@@ -19,7 +19,7 @@ class TestRegistrationWithNewData:
         current_url = driver.current_url
         assert "/login" in current_url
 
-    def test_registration_invalid_name(self,driver):
+    def test_registration_invalid_name(self, driver, locaNone):
         name, email, password = generate_registration_data()
         driver.find_element(*Locators.PERSONAL_CABINET).click()
         driver.find_element(*Locators.REGISTRATION).click()
