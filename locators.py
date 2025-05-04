@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
+
 # Главная страница
     # Вход через Личный кабинет
     PERSONAL_CABINET = (By.LINK_TEXT, "Личный Кабинет")
@@ -27,6 +28,13 @@ class Locators:
     # Кнопка для регистрации
     REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']")
     ENTRY = (By.LINK_TEXT, "Вход")
+    # Сообщение "Некорректный пароль"
     ERROR_REGISTRATION = (By.XPATH, "//p[@class='input__error text_type_main-default']")
     # Кнопка "Войти"
     REGISTERED_LOGIN = (By.XPATH, "//a[@class='Auth_link__1fOlj']")
+
+# Страница восстановления пароля
+   # Ввод email
+    EMAIL_FOR_RECOVERY = (By.XPATH, "//input[@class='text input__textfield text_type_main-default']")
+    # Кнопка "Восстановить"
+    RECOVER_BUTTON = (By.XPATH, "//button[text()='Восстановить']")

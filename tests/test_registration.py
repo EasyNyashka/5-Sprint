@@ -15,7 +15,7 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.EMAIL).send_keys(email)
         driver.find_element(*Locators.PASSWORD).send_keys(password)
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 50).until(EC.url_to_be("https://stellarburgers.nomoreparties.site/login"))
+        WebDriverWait(driver, 5).until(EC.url_to_be("https://stellarburgers.nomoreparties.site/login"))
         current_url = driver.current_url
         assert "/login" in current_url
 
@@ -27,7 +27,7 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.EMAIL).send_keys(email)
         driver.find_element(*Locators.PASSWORD).send_keys(password)
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 20).until(EC.url_to_be("https://stellarburgers.nomoreparties.site/register"))
+        WebDriverWait(driver, 5).until(EC.url_to_be("https://stellarburgers.nomoreparties.site/register"))
         current_url = driver.current_url
         assert "/register" in current_url
 
@@ -62,5 +62,5 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        error_element = WebDriverWait(driver, 20).until(EC.visibility_of_element_located(Locators.ERROR_REGISTRATION))
+        error_element = WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.ERROR_REGISTRATION))
         assert error_element.text == 'Такой пользователь уже существует'
