@@ -3,10 +3,15 @@ from selenium.webdriver.common.by import By
 class Locators:
 
 # Главная страница
-    # Вход через Личный кабинет
+    # Кнопка Личный кабинет
     PERSONAL_CABINET = (By.LINK_TEXT, "Личный Кабинет")
-    # Вход через кнопку Войти в аккаунт
+    # Кнопка Войти в аккаунт
     LOGIN_TO_ACCOUNT = (By.XPATH, "//button[text()='Войти в аккаунт']")
+    # Логотип Stellar Burgers
+    LOGO = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']")
+    # Кнопка Конструктор
+    CONSTRUCTOR = (By.LINK_TEXT, "Конструктор")
+
 
 # Страница Login
     # Кнопка "Войти"
@@ -15,8 +20,6 @@ class Locators:
     REGISTRATION = (By.LINK_TEXT, "Зарегистрироваться")
     # Ссылка "Восстановить пароль"
     RECOVER_PASSWORD = (By.LINK_TEXT, "Восстановить пароль")
-    # Выход на главную страницу
-    EXIT_TO_THE_MAIN_PAGE = (By.XPATH, "//a[@class='active']")
 
 # Страница регистрации
     # Поле "Имя"
