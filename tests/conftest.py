@@ -11,7 +11,7 @@ def driver():
     driver.maximize_window()
     driver.get("https://stellarburgers.nomoreparties.site/")
     yield driver
-    driver.quit()
+    #driver.quit()
 
 @pytest.fixture(scope="function")
 def authorized(driver):

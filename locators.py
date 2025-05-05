@@ -8,7 +8,7 @@ class Locators:
     # Кнопка Войти в аккаунт
     LOGIN_TO_ACCOUNT = (By.XPATH, "//button[text()='Войти в аккаунт']")
     # Логотип Stellar Burgers
-    LOGO = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']")
+    LOGO = (By.CSS_SELECTOR, "a[href='/']")
     # Кнопка Конструктор
     CONSTRUCTOR = (By.LINK_TEXT, "Конструктор")
 
