@@ -13,7 +13,7 @@ class Locators:
     CONSTRUCTOR = (By.LINK_TEXT, "Конструктор")
 
 
-# Страница Login
+# Страница входа в Личный кабинет
     # Кнопка "Войти"
     LOGIN = (By.XPATH, "//button[text()='Войти']")
     # Кнопка для входа на страницу регистрации
@@ -41,3 +41,8 @@ class Locators:
     EMAIL_FOR_RECOVERY = (By.XPATH, "//input[@class='text input__textfield text_type_main-default']")
     # Кнопка "Восстановить"
     RECOVER_BUTTON = (By.XPATH, "//button[text()='Восстановить']")
+
+# Кнопка в личном кабинете "Выход"
+    EXIT = (By.XPATH, "//button[text()='Выход']")
+
+
