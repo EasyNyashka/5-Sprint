@@ -22,6 +22,5 @@ def authorized(driver):
     driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
     driver.find_element(*Locators.LOGIN).click()
     WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.PERSONAL_CABINET))
-
     return driver
 

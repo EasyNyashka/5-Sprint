@@ -1,10 +1,9 @@
+from time import sleep
+
 import pytest
 from locators import Locators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from data import Credentials
-from curl import *
-import time
 
 class TestConstructor:
     def test_transition_to_sauces(self, driver):

@@ -44,6 +44,7 @@ class Locators:
 
 # Кнопка в личном кабинете "Выход"
     EXIT = (By.XPATH, "//button[text()='Выход']")
+
 # Конструктор
     # Вызов раздела
     BUNS = (By.XPATH, "//span[text()='Булки']")

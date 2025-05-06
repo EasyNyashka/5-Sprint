@@ -52,7 +52,7 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.EMAIL).send_keys(email)
         driver.find_element(*Locators.PASSWORD).send_keys('1w1')
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 20).until(EC.url_to_be(registration))
+        WebDriverWait(driver, 5).until(EC.url_to_be(registration))
         current_url = driver.current_url
         assert registration in current_url
 
