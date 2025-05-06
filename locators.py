@@ -44,5 +44,10 @@ class Locators:
 
 # Кнопка в личном кабинете "Выход"
     EXIT = (By.XPATH, "//button[text()='Выход']")
+# Конструктор
+    #BUNS =
+    #SAUCES =
+    #FILLINGS =
+
 
 
