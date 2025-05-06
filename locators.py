@@ -45,9 +45,14 @@ class Locators:
 # Кнопка в личном кабинете "Выход"
     EXIT = (By.XPATH, "//button[text()='Выход']")
 # Конструктор
-    #BUNS =
-    #SAUCES =
-    #FILLINGS =
+    # Вызов раздела
+    BUNS = (By.XPATH, "//span[text()='Булки']")
+    SAUCES = (By.XPATH, "//span[text()='Соусы']")
+    FILLINGS = (By.XPATH, "//span[text()='Начинки']")
+    # Название раздела
+    BUNS_SECTION = (By.XPATH, "//h2[text()='Булки']")
+    SAUCES_SECTION = (By.XPATH, "//h2[text()='Соусы']")
+    FILLINGS_SECTION = (By.XPATH, "//h2[text()='Начинки']")
 
 
 
