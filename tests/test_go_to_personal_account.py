@@ -24,6 +24,7 @@ class TestGoToPersonalAccount:
         driver.find_element(*Locators.LOGIN).click()
         WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.PERSONAL_CABINET))
         driver.find_element(*Locators.PERSONAL_CABINET).click()
+        WebDriverWait(driver, 30).until(EC.url_to_be(account_page))
         current_url = driver.current_url
         assert account_page in current_url
 
