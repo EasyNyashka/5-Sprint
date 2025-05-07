@@ -50,10 +50,8 @@ class Locators:
     BUNS = (By.XPATH, "//span[text()='Булки']")
     SAUCES = (By.XPATH, "//span[text()='Соусы']")
     FILLINGS = (By.XPATH, "//span[text()='Начинки']")
-    # Название раздела
-    BUNS_SECTION = (By.XPATH, "//h2[text()='Булки']")
-    SAUCES_SECTION = (By.XPATH, "//h2[text()='Соусы']")
-    FILLINGS_SECTION = (By.XPATH, "//h2[text()='Начинки']")
+    # Активная секция
+    ACTIVE_SECTION = (By.CSS_SELECTOR, "div.tab_tab_type_current__2BEPc")
 
 
 
