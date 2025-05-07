@@ -1,9 +1,12 @@
+import time
+
 import pytest
 from locators import Locators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from data import Credentials
 from curl import *
+import time
 
 class TestEntry:
 
@@ -12,16 +15,22 @@ class TestEntry:
         WebDriverWait(driver, 5).until(EC.url_to_be(login_page))
         driver.find_element(*Locators.EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.LOGIN))
         driver.find_element(*Locators.LOGIN).click()
-        assert driver.current_url
+        WebDriverWait(driver, 10).until(EC.url_to_be(home_page))
+        current_url = driver.current_url
+        assert home_page == current_url
 
     def test_valid_entry_via_login_to_account(self, driver):
         driver.find_element(*Locators.LOGIN_TO_ACCOUNT).click()
         WebDriverWait(driver, 5).until(EC.url_to_be(login_page))
         driver.find_element(*Locators.EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.LOGIN))
         driver.find_element(*Locators.LOGIN).click()
-        assert driver.current_url
+        WebDriverWait(driver, 10).until(EC.url_to_be(home_page))
+        current_url = driver.current_url
+        assert home_page == current_url
 
     def test_valid_entry_via_recover_password(self, driver):
         driver.find_element(*Locators.LOGIN_TO_ACCOUNT).click()
@@ -40,8 +49,11 @@ class TestEntry:
         WebDriverWait(driver, 5).until(EC.url_to_be(login_page))
         driver.find_element(*Locators.EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.LOGIN))
         driver.find_element(*Locators.LOGIN).click()
-        assert driver.current_url
+        WebDriverWait(driver, 10).until(EC.url_to_be(home_page))
+        current_url = driver.current_url
+        assert home_page == current_url
 
     def test_entry_via_personal_account_invalid_email(self, driver):
         driver.find_element(*Locators.PERSONAL_CABINET).click()
